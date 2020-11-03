@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-#flip a coin  from dice input adding those two valuess
+#flip a coin
 
 for i in 1
 do
