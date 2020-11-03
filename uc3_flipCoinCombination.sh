@@ -1,32 +1,26 @@
 #!/bin/bash -x
 
 #flip a coin
-head=0
-tail=0
-for i in {1..5}
+for i in 1
 do
         echo "You flipping a...";
         value=$(($RANDOM % 2+1));
-        if [ $value -eq 1 ]
+	value1=$(($RANDOM % 2+1));
+        if [ $((value & value1)) -eq 1 ]
+	then
+                echo "doublet - HH"  
+                break
+        elif [ $value -lt $value1 ]
         then
-                echo "Head"
-                head=$((head+1))
-                echo "no of heads - " $head
-                if [ $head -eq 2 ]
-                then
-                        echo "singlet head" $head
-                        break
-                fi
-        else
-                echo "Tail"
-                tail=$((tail+1))
-                echo "no of tails - " $tail
-                if [ $tail -eq 2 ]
-                then
-                        echo "singlet tail" $tail
-                        break
-                fi
-
+                echo "doublet - HT"
+                break
+	elif [ $value -gt $value1 ]
+	then
+                echo "doublet - TH"
+                break
+	else
+                echo "doublet - TT"
+                break
         fi
 done
 
