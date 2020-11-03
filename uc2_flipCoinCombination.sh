@@ -12,7 +12,7 @@ do
   	      	echo "Head"
 		head=$((head+1))
 		echo "no of heads - " $head
-		if [ $head -eq 2 ]
+		if [ $head -eq 1 ]
 		then
 			echo "singlet head" $head
 			break
@@ -21,7 +21,7 @@ do
         	echo "Tail"
 		tail=$((tail+1))
 		echo "no of tails - " $tail
-                if [ $tail -eq 2 ]
+                if [ $tail -eq 1 ]
                 then
                         echo "singlet tail" $tail
 			break
