@@ -2,7 +2,7 @@
 
 read -p "Enter string -  " userInput
 
-email_pattern="^[a-zA-Z]{3}\-[0-9]{3}\@[a-zA-Z]{3}\.(net)\,$";
+email_pattern="^[a-zA-Z]{3,}\-[0-9]{3,}\@[a-zA-Z]{3,}\.(net)\,$";
 
 if [[ $userInput =~ $email_pattern ]]
 then
