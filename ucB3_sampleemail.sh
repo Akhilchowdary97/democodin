@@ -1,4 +1,3 @@
-
 #!/bin/bash -x
 
 read -p "Enter string -  " userInput
@@ -12,4 +11,4 @@ else
         echo "invalid"
 fi
 
-#correct validation showing in regex101
+
